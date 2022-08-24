@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>民視新聞Podcast來了！</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="台灣最前線 台灣向前行 辣新聞152 民視新聞Podcast來了！｜民視新聞網">
+    <meta property="og:title" content="民視新聞Podcast來了！｜民視新聞網" />
+    <meta property="og:site_name" content="民視新聞Podcast來了！｜民視新聞網" />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="zh_TW" />
+    <meta property="og:url" content="https://www.ftvnews.com.tw/podcast/index.html" />
+    <meta property="og:image" content="https://www.ftvnews.com.tw/podcast/resource/cover1.jpg" />
+    <meta property="og:image:width" content="563" />
+    <meta property="og:image:height" content="296" />
+    <meta property="og:description" content="台灣最前線 台灣向前行 辣新聞152 民視新聞Podcast來了！｜民視新聞網" />
+    <meta property="fb:app_id" content="157389381527660" />
+    <META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+    <META HTTP-EQUIV="EXPIRES" CONTENT="0">
+    <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+    <title>民視新聞Podcast來了！｜民視新聞網</title>
+
+    <link rel="icon" href="/images/favicon.ico" />
+    <link rel="canonical" href="https://www.ftvnews.com.tw/podcast/index.html" />
+
+    <!-- style -->
+    <link rel="stylesheet" href="./assets/style.css?ver=202101010830">
+
+    <div id="app" v-cloak>
+        <header>
+            <img :src="img.banner" alt="民視新聞podcast">
+            <h1>{{title}}</h1>
+        </header>
+        <main>
+            <div class="program layout">
+                <h2>{{subtitle}}</h2>
+
+                <section v-for="item of program">
+                    <a :href="item.link" target="_blank">
+                        <img :src="item.cover" alt="item.title">
+                        <h2>{{item.title}}</h2>
+                    </a>
+                    <a :href="item.link" target="_blank">
+                        <i class="fas fa-2x fa-podcast"></i> 馬上收聽</a>
+                </section>
+
+            </div>
+            <div class="note layout">
+                <img :src="img.coming" alt="更多民視新聞精彩內容將陸續公開！敬請期待！">
+            </div>
+        </main>
+        <footer>
+            <div class="footer_logo">
+                <img :src="img.logo" alt="民視新聞 FTV 台灣的眼睛"> <a href="https://www.ftvnews.com.tw/"
+                    target="_blank">{{siteName}}</a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-101119806-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-101119806-1');
+    </script>
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/44e5d9f0d5.js" crossorigin="anonymous"></script>
+
+    <!-- script -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.js'
+        integrity='sha512-YXLGLsQBiwHPHLCAA9npZWhADUsHECjkZ71D1uzT2Hpop82/eLnmFb6b0jo8pK4T0Au0g2FETrRJNblF/46ZzQ=='
+        crossorigin='anonymous'></script>
+    <script src="./assets/script.js?ver=202101010830"></script>
+</head>
+</head>
+
+<body>
+
+
+</body>
+
+</html>

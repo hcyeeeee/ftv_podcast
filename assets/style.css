@@ -1,0 +1,223 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    background-color: #1b759a;
+}
+
+ul {
+    list-style: none;
+}
+
+ol {
+    list-style: trad-chinese-informal;
+    margin-left: 5%;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+img {
+    width: 100%;
+
+}
+
+/* global */
+
+[v-cloak] {
+    display: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Microsoft JhengHei', '微軟正黑體', Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+* {
+    touch-action: pan-y;
+    box-sizing: border-box;
+}
+
+ul, ol {
+    padding: 3% 0;
+}
+
+ul li, ol li {
+    line-height: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.6rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    margin-top: 5%;
+}
+
+p {
+    line-height: 20px;
+    margin: 10px 0;
+}
+
+/* header */
+
+header {
+    max-width: 100%;
+    width: 100%;
+    position: relative;
+}
+
+header h1 {
+    position: absolute;
+    top: 0;
+    color: rgba(0, 0, 0, 0);
+}
+
+header img {
+    width: 100%;
+}
+
+/* main */
+
+main {
+    max-width: 1400px;
+    margin: auto;
+}
+
+main h2 {
+    padding: 2% 0;
+    text-align: center;
+    color: #0e445a;
+    font-weight: bolder;
+    background-color: bisque;
+}
+
+main section h2 {
+    padding: 5% 0;
+}
+
+.layout {
+    width: 100%;
+    text-align: center;
+}
+
+.layout section {
+    max-width: 400px;
+    margin: 30px;
+    display: inline-block;
+}
+
+.layout section h2 {
+    font-size: 1.3rem;
+    padding: 5% 0;
+    font-weight: bolder;
+    text-align: center;
+    color: #0e445a;
+}
+
+.layout section img {
+    box-shadow: 2px 3px 5px #5a5a5a;
+    width: 400px;
+    height: 300px;
+}
+
+.layout section a {
+    color: #0e445a;
+}
+
+.program {
+    border-radius: 0 0 30px 30px;
+    background-color: #feeed3;
+    box-shadow: 2px 3px 5px black;
+    margin: 5% 0;
+}
+
+.note {
+    margin: 5% 0;
+}
+
+.note img {
+    width: 100%;
+    box-shadow: 2px 3px 5px black;
+}
+
+/* footer */
+
+footer {
+    background-color: #181818;
+    padding: 10px;
+    color: white;
+}
+
+footer img {
+    width: 30px;
+    vertical-align: middle;
+}
+
+.footer_logo a {
+    color: white;
+}
+
+.footer_logo {
+    text-align: center;
+}
+
+.footer_logo a:visited {
+    color: white;
+}
+
+
+.jss42 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
