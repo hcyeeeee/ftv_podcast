@@ -171,6 +171,7 @@ main section h2 {
 
 .layout section a {
     color: #0e445a;
+    margin: auto;
 }
 
 .program {
@@ -220,4 +221,18 @@ footer img {
     height: 100%;
     object-fit: cover;
     display: none;
+}
+
+.player {
+
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    bottom: 1rem;
+    width: 100%;
+    margin: auto;
+    max-width: 1400px;
+    margin-bottom: 1rem;
+
+
 }

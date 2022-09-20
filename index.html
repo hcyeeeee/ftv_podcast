@@ -23,12 +23,43 @@
     <META HTTP-EQUIV="EXPIRES" CONTENT="0">
     <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
     <title>民視新聞Podcast來了！｜民視新聞網</title>
-
     <link rel="icon" href="/images/favicon.ico" />
     <link rel="canonical" href="https://www.ftvnews.com.tw/podcast/index.html" />
-
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <!-- style -->
     <link rel="stylesheet" href="./assets/style.css?ver=202101010830">
+    <style>
+        .fas {
+            font-size: 18px;
+            margin: auto;
+
+        }
+
+        .player {
+            display: none;
+        }
+
+        .playeron {
+            display: block;
+        }
+
+
+        .playbutton {
+            display: block;
+            justify-content: space-around;
+
+
+        }
+
+        .playbutton a {
+            display: flex;
+            border: 1px solid transparent;
+            padding: .5rem;
+
+
+        }
+    </style>
 
     <div id="app" v-cloak>
         <header>
@@ -44,15 +75,25 @@
                         <img :src="item.cover" alt="item.title">
                         <h2>{{item.title}}</h2>
                     </a>
-                    <a :href="item.link" target="_blank">
-                        <i class="fas fa-2x fa-podcast"></i> 馬上收聽</a>
+                    <div class="playbutton">
+                        <a :href="item.link" target="_blank">
+                            <i class="fas  fa-podcast"> 即刻訂閱</i>
+                        </a>
+                        <a href="" id=podcast target="">
+                            <i class="fas fa-circle-play"> 馬上收聽</i>
+                        </a>
+                    </div>
                 </section>
+            </div>
 
-            </div>
-            <div class="note layout">
-                <img :src="img.coming" alt="更多民視新聞精彩內容將陸續公開！敬請期待！">
-            </div>
         </main>
+
+        <div class="player" :class="{ playeron: active }" v-for="item of program">
+            <iframe class="myDIV" style="border-radius:20px" :src="item.src" width="100%" height="100" frameBorder="0"
+                allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; "
+                loading="lazy"></iframe>
+        </div>
+
         <footer>
             <div class="footer_logo">
                 <img :src="img.logo" alt="民視新聞 FTV 台灣的眼睛"> <a href="https://www.ftvnews.com.tw/"
@@ -61,7 +102,28 @@
         </footer>
     </div>
 
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script>
+        export default {
+            data() {
+                return {
+                    scrollY: '',
+                }
+            },
+
+            methods: {
+                handleScroll() {
+
+                    this.active = window.scrollY > 800 ? true : false
+                },
+            },
+            created() {
+                window.addEventListener('scroll', this.handleScroll)
+                window.addEventListener('scroll', this.scroll)
+            },
+        }
+    </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-101119806-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -72,13 +134,16 @@
     </script>
 
     <!-- fontawesome -->
-    <script src="https://kit.fontawesome.com/44e5d9f0d5.js" crossorigin="anonymous"></script>
-
+    <script src="https://kit.fontawesome.com/745a06c6e1.js" crossorigin="anonymous"></script>
     <!-- script -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.js'
         integrity='sha512-YXLGLsQBiwHPHLCAA9npZWhADUsHECjkZ71D1uzT2Hpop82/eLnmFb6b0jo8pK4T0Au0g2FETrRJNblF/46ZzQ=='
         crossorigin='anonymous'></script>
     <script src="./assets/script.js?ver=202101010830"></script>
+    <script>
+
+    </script>
+
 </head>
 </head>
 
@@ -86,5 +151,9 @@
 
 
 </body>
+
+
+
+
 
 </html>
