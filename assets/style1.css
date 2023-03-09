@@ -16,9 +16,10 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 /* HTML5 display-role reset for older browsers */
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav {
     display: block;
 }
+
 
 body {
     line-height: 1;
@@ -63,6 +64,8 @@ img {
 [v-cloak] {
     display: none;
 }
+
+
 
 body {
     margin: 0;
@@ -144,16 +147,75 @@ main section h2 {
     padding: 5% 0;
 }
 
-.layout {
-    width: 100%;
-    text-align: center;
-}
-
 .layout section {
-    max-width: 400px;
+    max-width: 280px;
     margin: 30px;
     display: inline-block;
 }
+
+.layout2 {
+    width: 100%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: auto;
+}
+
+@media screen and (max-width: 1000px) {
+
+
+    .layout2 {
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+
+
+}
+
+@media screen and (max-width: 768px) {
+
+
+    .layout2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .layout section {
+        margin: 30px;
+        max-width: 240px;
+        /* display: flex; */
+        display: inline-block;
+
+
+    }
+
+
+}
+
+@media screen and (max-width: 500px) {
+
+
+    .layout2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: auto;
+    }
+
+    .layout section {
+        max-width: 280px;
+        margin: 30px auto;
+
+        display: flex;
+        flex-direction: column;
+
+    }
+}
+
+
+
+
 
 .layout section h2 {
     font-size: 1.3rem;
@@ -165,8 +227,8 @@ main section h2 {
 
 .layout section img {
     box-shadow: 2px 3px 5px #5a5a5a;
-    width: 400px;
-    height: 300px;
+    /* width: 400px; */
+    /* height: 300px; */
 }
 
 .layout section a {
